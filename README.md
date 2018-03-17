@@ -18,8 +18,6 @@ schemes=(
 
 domains=(
   www.example.com
-  example.org
-  www.example.org
 )
 ```
 
@@ -31,57 +29,19 @@ Once setup, you may execute the script without any arguments:
 
 ## Sample Output
 
+The sample below aren't based exactly on the variables set above, they're just there to demonstrate the different output states.
+
 ```Bash
 $ ./check.sh
-samerziadeh.com
+www.example.com
  ✔ http
  ✔ https
 
-www.samerziadeh.com
+example.com
  ✔ http
- ✔ https
+ * Skipping https://example.com/
 
-samerziade.com
- ✔ http
- ✔ https
-
-www.samerziade.com
- ✔ http
- ✔ https
-
-samerziadeh.ca
- ✔ http
- ✔ https
-
-www.samerziadeh.ca
- ✔ http
- ✔ https
-
-samerziade.ca
- ✔ http
- ✔ https
-
-www.samerziade.ca
- ✔ http
- ✔ https
-
-samer.io
- ✔ http
- * Skipping https://samer.io/
-
-www.samer.io
- ✔ http
- ✔ https
-
- www.example.com
- × NOT FOUND (http)
- × NOT FOUND (https)
-
-example.org
- × NOT FOUND (http)
- × NOT FOUND (https)
-
-www.example.org
+ www.example.net
  × NOT FOUND (http)
  × NOT FOUND (https)
 ```
